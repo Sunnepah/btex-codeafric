@@ -22,9 +22,9 @@ coinApp.controller('mainController', function($scope, $http) {
   ];
 
   checkSession = function () {
-    var loginToken = window.sessionStorage.getItem("login_token");
-    if (!loginToken) {
-      window.location.href = "login.html";
+    var registerToken = window.sessionStorage.getItem("register_token");
+    if (!registerToken) {
+      window.location.href = "register.html";
     }
   }
   
@@ -73,7 +73,7 @@ coinApp.controller('mainController', function($scope, $http) {
             $scope.total_currency_units = 0.00;
           } else {
            $scope.total_currency_units = units;
-            $scope.total_usd_units = 0.00
+            $scope.total_usd_units = 0.00;
           }
         }
       });
@@ -89,7 +89,7 @@ coinApp.controller('LoginController', function ($scope, $http) {
   }
 
   $scope.handleFormSubmit = function () {
-    console.log("submitted: ", $scope.email, $scope.passwd);
+       console.log("submitted: ", $scope.email, $scope.passwd);
     $http({
       method: 'POST',
       url: 'https://reqres.in/api/login',
@@ -113,6 +113,46 @@ coinApp.controller('LoginController', function ($scope, $http) {
 
 
 coinApp.controller('RegisterController', function ($scope, $http) {
+  console.log("what")
+
+  $scope.init = function () {
+    var registerToken = window.sessionStorage.getItem("register_token");
+    if (!!registerToken) {
+      window.location.href = "login.html";
+    }
+  }
+
+  $scope.handleFormRegister = function () {
+    console.log("we are here")
+    console.log("submitted: ", $scope.username, $scope.passwd, $scope.username,
+ $scope.name,
+    $scope.email,
+   $scope.currency,
+     $scope.passwd,
+    $scope.confirmpasswd);
+    $http({
+      method: 'POST',
+      url: 'https://reqres.in/api/register',
+      data: {
+        "username": $scope.username,
+        "name": $scope.name,
+        "email": $scope.email,
+        "currency": $scope.currency,
+        "password": $scope.passwd,
+        "confirmpasswd": $scope.confirmpasswd
+      }
+    }).then(function successCallback(response) {
+      if (!!response.data.token) {
+        window.sessionStorage.setItem("register_token", response.data.token);
+        alert("Registration successful");
+        window.location.href = "login.html";
+      } else {
+        alert("Login failed unknown error");
+      }
+    }, function errorCallback(response) {
+      alert("Login failed: "+response.data.error);
+    });
+  };
 
   $scope.currenciesWithNames = [
     { code: 'EUR', name: 'Euro' },
@@ -122,3 +162,8 @@ coinApp.controller('RegisterController', function ($scope, $http) {
     { code: 'CAD', name: 'Canadian Dollars' }
   ];
 });
+
+
+
+
+

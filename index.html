@@ -2,18 +2,19 @@
 
 <head>
 
+  <!--Style sheets-->
   <link href="vendor/css/bootstrap.css" rel="stylesheet">
   <link href="vendor/css/bootstrap-select.css" rel="stylesheet">
-
-  <script src="vendor/js/angular.js"></script>
-  <script src="vendor/js/jquery.js"></script>
-  <script src="vendor/js/bootstrap.js"></script>
-  <script src="vendor/js/bootstrap-select.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.0-rc3/angular-material.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/css/material-datetimepicker.css" type="text/css" />
   <link href="tw-currency-select.css" rel="stylesheet">
-  <script src="main.js"></script>
   <link href="index.css" rel="stylesheet">
-  <script src="tw-currency-select.js"></script>
 </head>
+<!--Body starts-->
 
 <body ng-controller="mainController">
   <div ng-init="getPrice()" class="container">
@@ -31,7 +32,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a> <br> <br>
+            <a class="nav-link" href="#">Link</a>
+            <br>
+            <br>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -49,25 +52,19 @@
             <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+
       </div>
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-centered">
+        <div class="col-lg-7">
           <table class="table table-bordered">
-      <h5>{{title}}</h5>
-      <section class="m-b-l m-t-lg clearfix currency">
-        <currency-select search-placeholder="Search Currency..." none-selected-text="Select Currency" ng-model="currency_to_convert_to"
-          currencies="currenciesWithNames" ng-change="getPrice()">
-        </currency-select>
-      </section>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-centered">
+            <h5>{{title}}</h5>
+            <section class="m-b-l m-t-lg clearfix currency">
+              <currency-select search-placeholder="Search Currency..." none-selected-text="Select Currency" ng-model="currency_to_convert_to"
+                currencies="currenciesWithNames" ng-change="getPrice()">
+              </currency-select>
+            </section>
             <table class="table table-bordered">
               <thead class="thead-dark">
                 <tr>
@@ -84,71 +81,130 @@
                 </tr>
               </tbody>
             </table>
-          </div>
-          <div class="row">
-            <div class="col-lg-8 col-centered">
+            <div>
               <form>
                 <span id="units">Units to Buy:</span>
-                <input type="number" step="0.1" ng-model="units" placeholder="Enter units to buy" required
-                  ng-change="calculateTotal()">
+                <input type="number" step="0.1" ng-model="units" placeholder="Enter units to buy" required ng-change="calculateTotal()">
               </form>
               <br>
               <table class="table table-bordered">
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col">Units</th>
-                    <th scope="col">USD</th> <br>
                     <th scope="col">{{currency_to_convert_to.name}}</th>
                   </tr>
                 </thead>
                 <tbody class="table-striped">
                   <tr>
                     <td>{{units}}</td>
-                    <td>{{total_usd_amount}}</td>
                     <td>{{total_currency_amount}}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-          </div>
+            <div>
+              <h3 class="pay">Amount to pay:</h3>
+              <div class="input-group pay">
+                <input type="number" step="any" required name="amount" class="form-control" ng-model="amount" placeholder="Amount to Pay"
+                  autocomplete="off" ng-change="calculateUnits()" />
+                <div class="input-group-btn">
+                  <currency-select ng-model="currency_to_convert_to" currencies="currenciesWithNames" ng-change="getPrice()">
+                  </currency-select>
+                </div>
+              </div>
+
+              <table class="table table-bordered  ">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Amount</th>
+                    <th scope="col">{{currency_to_convert_to.name}} units</th>
+                  </tr>
+                </thead>
+                <tbody class="table-bordered table-hover ">
+                  <tr>
+                    <td>{{amount}}</td>
+                    <td>{{total_currency_units}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
         </div>
-        <div class="row">
-          <div class="col-lg-8 col-centered">
-            <h3 class="pay">Amount to pay:</h3>
-            <div class="input-group pay">
-              <input type="number" step="any" required name="amount" class="form-control" ng-model="amount" placeholder="Amount to Pay"
-                autocomplete="off" ng-change="calculateUnits()" />
-              <div class="input-group-btn">
-                <currency-select ng-model="currency_to_convert_to" currencies="currenciesWithNames" ng-change="getPrice()">
-                </currency-select>
+        <div>
+
+
+
+          <div ng-init="getData()" class=" row">
+            <div class="horizontal col-lg-5 ">
+              <div>
+                <md-content class="md-padding">
+                  <md-card class="test1" layout="column">
+                    <md-toolbar class="md-primary">
+                      <div class="md-toolbar-tools">
+                        <h4>
+                          <span>Select Date to View Historical Data</span>
+                        </h4>
+                      </div>
+                    </md-toolbar>
+                    <md-card-content class="md-padding">
+                      <p>
+                        Double click or Double tap to make selections.
+                      </p>
+                      <div layout-gt-md="row" layout="column" layout-align-gt-md="center center">
+                        <div layout="column" flex-gt-md="30" class="range">
+                          <md-input-container>
+
+                            <input mdc-datetime-picker date="true" time="false" type="text" placeholder="Start Date" max-date="dateTimeEnd" ng-model="dateTimeStart"
+                           ng-change="getData()" ng-submit="getData()" />
+                          </md-input-container>
+                          <md-input-container>
+
+                            <input mdc-datetime-picker date="true" time="false" type="text" placeholder="End Date" min-date="dateTimeStart" ng-model="dateTimeEnd"
+                            />
+                          </md-input-container>
+                        </div>
+                      </div>
+
+                      <h4 class="history text-xs-center">Historical Data</h4>
+                      <div class="test">
+                        <table class="table table-bordered ">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col">Date</th>
+                              <th scope="col">Rate</th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-striped">
+                            <tr ng-repeat="(date,rate) in history">
+                              <td>{{date}}</td>
+                              <td>{{rate}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 col-centered">
-          <table class="table table-bordered  ">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">Amount</th>
-                <th scope="col">USD units</th>
-                <th scope="col">{{currency_to_convert_to.name}} units</th>
-              </tr>
-            </thead>
-            <tbody class="table-bordered table-hover ">
-              <tr>
-                <td>{{amount}}</td>
-                <td>{{total_usd_units}}</td>
-                <td>{{total_currency_units}}</td>
-              </tr>
-            </tbody>
-          </table>
-          <h6 class="text-info">Disclaimer:{{disclaimer}}</h6>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
-  <script src="main.js"></script>
+            <div>
+              <h4 class="text-info">Disclaimer:{{disclaimer}}</h4>
+            </div>
+
+            <!-- JS Files-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-aria.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.0-rc3/angular-material.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+            <script src="vendor/js/jquery.js"></script>
+            <script src="vendor/js/bootstrap.js"></script>
+            <script src="vendor/js/bootstrap-select.js"></script>
+            <script src="main.js"></script>
+            <script src="tw-currency-select.js"></script>
+            <script src="vendor/js/beautifier.js"></script>
+            <script src="vendor/js/angular-material-datetimepicker.js"></script>
+
+
+
+
 </body>
+
+</html>

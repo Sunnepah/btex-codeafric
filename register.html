@@ -30,28 +30,28 @@
         <div class="row main">
             <div class="main-login main-center">
                 <h5>Sign up to BitCoinValue Calculator.</h5>
-                <form class="" method="post" action="#">
+                <form ng-submit="handleFormRegister()">
 
                     <div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">First Name</label>
+                        <label for="name" class="cols-sm-2 control-label">Username</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <i class="fa fa-user fa" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control" name="first_name" id="name" placeholder="Enter your first Name" />
+                                <input type="text" class="form-control" name="first_name" id="name" ng-model="username" placeholder="Enter your first Name" />
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">Last Name</label>
+                        <label for="name" class="cols-sm-2 control-label">Name</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <i class="fa fa-user fa" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control" name="last_name" id="name" placeholder="Enter your last Name" />
+                                <input type="text" class="form-control" name="last_name" id="name" ng-model="name" placeholder="Enter your last Name" />
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-envelope fa" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+                                <input type="text" class="form-control" name="email" id="email" ng-model="email" placeholder="Enter your Email" />
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                     <i class="fa fa-users fa" aria-hidden="true"></i>
                                 </span>
                                 <currency-select search-placeholder="Search Currency..." none-selected-text="Select Currency"
-                                    currencies="currenciesWithNames">
+                                ng-model="currency" currencies="currenciesWithNames"> 
                                 </currency-select>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
                                 </span>
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
+                                <input type="password" class="form-control" name="password" id="password" ng-model="passwd" placeholder="Enter your Password" />
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
                                 </span>
-                                <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password" />
+                                <input type="password" class="form-control" name="confirm" id="confirm" ng-model="confirmpasswd" placeholder="Confirm your Password" />
                             </div>
                         </div>
                     </div>
