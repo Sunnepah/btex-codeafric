@@ -14,13 +14,13 @@
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <script src="vendor/js/angular.js"></script>
+    <script src="vendor/js/angular.min.js"></script>
     <script src="vendor/js/jquery.js"></script>
     <script src="vendor/js/bootstrap.js"></script>
     <script src="vendor/js/bootstrap-select.js"></script>
     <script src="main.js"></script>
-    <link href="tw-currency-select.css" rel="stylesheet">
-    <script src="tw-currency-select.js"></script>
+    <link href="vendor/css/tw-currency-select.css" rel="stylesheet">
+    <script src="vendor/js/tw-currency-select.js"></script>
 
     <title>Admin</title>
 </head>
@@ -39,7 +39,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-user fa" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control" name="first_name" id="name" ng-model="username" placeholder="Enter your first Name" />
+                                <input type="text" class="form-control" name="first_name" id="name" ng-model="username" placeholder="Enter your first Name" required />
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-user fa" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control" name="last_name" id="name" ng-model="name" placeholder="Enter your last Name" />
+                                <input type="text" class="form-control" name="last_name" id="names" ng-model="name" placeholder="Enter your last Name" required />
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-envelope fa" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control" name="email" id="email" ng-model="email" placeholder="Enter your Email" />
+                                <input type="text" class="form-control" name="email" id="email" ng-model="email" placeholder="Enter your Email" required/>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
                                 </span>
-                                <input type="password" class="form-control" name="password" id="password" ng-model="passwd" placeholder="Enter your Password" />
+                                <input type="password" class="form-control" name="password" id="password" ng-model="passwd" placeholder="Enter your Password" required/>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
                                 </span>
-                                <input type="password" class="form-control" name="confirm" id="confirm" ng-model="confirmpasswd" placeholder="Confirm your Password" />
+                                <input type="password" class="form-control" name="confirm" id="confirm" ng-model="confirmpasswd" placeholder="Confirm your Password" required/>
                             </div>
                         </div>
                     </div>

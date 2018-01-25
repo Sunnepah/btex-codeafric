@@ -1,6 +1,12 @@
-//gets currency from user selection
-var coinApp = angular.module('coinApp', ['tw-currency-select']);
+var coinApp = angular.module('coinApp', ['tw-currency-select','ngMaterialDatePicker']);
 coinApp.controller('mainController', function($scope, $http) {
+   
+	$scope.dateTimeStart="2018-01-10";
+	$scope.dateTimeEnd="2018-01-18";
+	
+	var startDate =moment($scope.dateTimeStart).format('YYYY-MM-DD');
+	var endDate= moment($scope.dateTimeEnd).format('YYYY-MM-DD');
+console.log(endDate);
 
     $scope.title = "My Bitcoin Exchange";
     $scope.currencyChangeCount = 0;
@@ -44,6 +50,20 @@ coinApp.controller('mainController', function($scope, $http) {
 
           $scope.calculateTotal();
           $scope.calculateUnits();
+        }, function errorCallback(response) {
+          console.error(response);
+        });
+    }
+
+    $scope.getData = function() {   
+     
+      $http({
+        method: 'GET',
+        url: "https://api.coindesk.com/v1/bpi/historical/close.json?start=" + startDate + "&end=" + endDate
+      }).then(function successCallback(response) {
+        
+       $scope.history=response.data.bpi;
+     
         }, function errorCallback(response) {
           console.error(response);
         });

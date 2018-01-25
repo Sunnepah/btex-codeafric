@@ -5,13 +5,13 @@
   <!--Style sheets-->
   <link href="vendor/css/bootstrap.css" rel="stylesheet">
   <link href="vendor/css/bootstrap-select.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.0-rc3/angular-material.min.css" rel="stylesheet"
+  <link href='vendor/css/roboto-fonts.css' rel='stylesheet' type='text/css'>
+  <link href="vendor/css/github.min.css" rel="stylesheet">
+  <link href="vendor/css/angular-material.min.css" rel="stylesheet"
     type="text/css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="vendor/css/material-datetimepicker.css" type="text/css" />
-  <link href="tw-currency-select.css" rel="stylesheet">
+  <link href="vendor/css/icon.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/css/material-datetimepicker.min.css" type="text/css" />
+  <link href="vendor/css/tw-currency-select.css" rel="stylesheet">
   <link href="index.css" rel="stylesheet">
 </head>
 <!--Body starts-->
@@ -132,8 +132,7 @@
         <div>
 
 
-
-          <div ng-init="getData()" class=" row">
+          <div ng-init="getData()" class=" row" >
             <div class="horizontal col-lg-5 ">
               <div>
                 <md-content class="md-padding">
@@ -157,13 +156,11 @@
                            ng-change="getData()" ng-submit="getData()" />
                           </md-input-container>
                           <md-input-container>
-
                             <input mdc-datetime-picker date="true" time="false" type="text" placeholder="End Date" min-date="dateTimeStart" ng-model="dateTimeEnd"
                             />
                           </md-input-container>
                         </div>
                       </div>
-
                       <h4 class="history text-xs-center">Historical Data</h4>
                       <div class="test">
                         <table class="table table-bordered ">
@@ -186,19 +183,18 @@
             <div>
               <h4 class="text-info">Disclaimer:{{disclaimer}}</h4>
             </div>
-
             <!-- JS Files-->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-aria.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.0-rc3/angular-material.min.js"></script>
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+            <script src="vendor/js/angular.min.js"></script>
+            <script src="vendor/js/angular-animate.min.js"></script>
+            <script src="vendor/js/angular-aria.min.js"></script>
+            <script src="vendor/js/angular-material.min.js"></script>
+            <script type="text/javascript" src="vendor/js/moment-with-locales.min.js"></script>
+            <script type="text/javascript" src="vendor/js/highlight.min.js"></script>
             <script src="vendor/js/jquery.js"></script>
             <script src="vendor/js/bootstrap.js"></script>
             <script src="vendor/js/bootstrap-select.js"></script>
             <script src="main.js"></script>
-            <script src="tw-currency-select.js"></script>
+            <script src="vendor/js/tw-currency-select.js"></script>
             <script src="vendor/js/beautifier.js"></script>
             <script src="vendor/js/angular-material-datetimepicker.js"></script>
 
