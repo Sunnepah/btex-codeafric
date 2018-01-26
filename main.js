@@ -1,6 +1,5 @@
 var coinApp = angular.module('coinApp', ['tw-currency-select','ngMaterialDatePicker']);
 coinApp.controller('mainController', function($scope, $http) {
-   
 	$scope.dateTimeStart="2018-01-10";
 	$scope.dateTimeEnd="2018-01-18";
 	
@@ -28,12 +27,17 @@ console.log(endDate);
   ];
 
   checkSession = function () {
-    var registerToken = window.sessionStorage.getItem("register_token");
+    var registerToken = window.sessionStorage.getItem("login_token");
     if (!registerToken) {
-      window.location.href = "register.html";
+      window.location.href = "login.html";
     }
   }
   
+  $scope.logout= function(){
+    window.sessionStorage.removeItem("login_token");
+    alert($scope.username + " you have logged out succesfully")
+    window.location.href = "login.html";
+  }
     $scope.getPrice = function() {
       checkSession();
       console.log("Trying to get price");   
