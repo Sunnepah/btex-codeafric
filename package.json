@@ -1,0 +1,17 @@
+{
+    "name": "btex-app",
+    "version": "0.0.1",
+    "description": "A sample Angular app using Express 4",
+    "main": "index.html",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.16.2"
+    },
+    "engines": {
+      "node": "4.7.0"
+    },
+    "author": "Code Afriq",
+    "license": "MIT"
+  }
