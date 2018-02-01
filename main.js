@@ -7,7 +7,7 @@ coinApp.controller('mainController', function($scope, $http) {
 	var endDate= moment($scope.dateTimeEnd).format('YYYY-MM-DD');
 console.log(endDate);
 
-    $scope.title = "My Bitcoin Exchange";
+    $scope.title = "Bitcoin Exchange";
     $scope.currencyChangeCount = 0;
     $scope.currencyCodeChangeCount = 0;
 
@@ -35,7 +35,7 @@ console.log(endDate);
   
   $scope.logout= function(){
     window.sessionStorage.removeItem("login_token");
-    alert($scope.username + " you have logged out succesfully")
+    alert(" You have Logged Out Succesfully")
     window.location.href = "login.html";
   }
     $scope.getPrice = function() {
@@ -137,7 +137,7 @@ coinApp.controller('LoginController', function ($scope, $http) {
 
 
 coinApp.controller('RegisterController', function ($scope, $http) {
-  console.log("what")
+
 
   $scope.init = function () {
     var registerToken = window.sessionStorage.getItem("register_token");
