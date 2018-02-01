@@ -1,8 +1,9 @@
 
- body {
+ html, body {
     padding:29px;
     align-content: middle;
     vertical-align: middle;
+    background-color: #263238;
 }
 
 .theDropdown {
@@ -14,14 +15,14 @@
 #units{
     font-size: 20px;
     font-weight: 600;
-    color: black;
+    color: #ffd600 ;
     padding-right: 105px;
    
 }
 .pay{
     font-size: 20px;
     font-weight: 600;
-    color: black;
+    color: #ffd600 ;
     padding-right:105px; 
     padding-bottom:15px; 
 }

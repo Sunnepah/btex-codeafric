@@ -58,14 +58,14 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-7">
-          <table class="table table-bordered">
+          <table class="table table-bordered ">
             <h5>{{title}}</h5>
             <section class="m-b-l m-t-lg clearfix currency">
               <currency-select search-placeholder="Search Currency..." none-selected-text="Select Currency" ng-model="currency_to_convert_to"
                 currencies="currenciesWithNames" ng-change="getPrice()">
               </currency-select>
             </section>
-            <table class="table table-bordered">
+            <table class="table table-bordered table-inverse">
               <thead class="thead-dark">
                 <tr>
                   <th scope="col">Code</th>

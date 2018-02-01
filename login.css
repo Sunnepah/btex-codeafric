@@ -1,4 +1,9 @@
 /* Base CSS */
+
+
+
+
+
 .alignleft {
     float: left;
     margin-right: 15px;
@@ -106,4 +111,11 @@ a:hover { text-decoration: none }
 }
 #pswd_info {
     display:none;
+}
+
+
+
+.login{
+    font-weight:800;
+
 }
