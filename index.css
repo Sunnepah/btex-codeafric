@@ -5,7 +5,7 @@
     padding:40px;
     align-content: middle;
     vertical-align: middle;
-    background-color: #263238;
+    background-color: #90a4ae;
     
 }
 
@@ -139,4 +139,9 @@ table.table-bordered > thead > tr > th{
 table.table-bordered > tbody > tr > td{
     border:.1px solid #ffd600;
     font-size:17px;
+}
+
+.disclaimer{
+    color:#ffd600;
+    font-weight: 800;
 }
