@@ -1,17 +1,29 @@
 {
-    "name": "btex-app",
-    "version": "0.0.1",
-    "description": "A sample Angular app using Express 4",
-    "main": "index.html",
-    "scripts": {
-      "start": "node server.js"
-    },
-    "dependencies": {
-      "express": "^4.16.2"
-    },
-    "engines": {
-      "node": "4.7.0"
-    },
-    "author": "Code Afriq",
-    "license": "MIT"
-  }
+  "name": "btex-app",
+  "version": "0.0.1",
+  "description": "A sample Angular app using Express 4",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "engines": {
+    "node": "4.7.0"
+  },
+  "author": "Ola John Ajiboye",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlaJohn-Ajiboye/btex-codeafric.git"
+  },
+  "keywords": [
+    "Angular",
+    "App"
+  ],
+  "bugs": {
+    "url": "https://github.com/OlaJohn-Ajiboye/btex-codeafric/issues"
+  },
+  "homepage": "https://github.com/OlaJohn-Ajiboye/btex-codeafric#readme"
+}
