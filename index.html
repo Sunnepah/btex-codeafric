@@ -26,7 +26,7 @@
           <li><a class="active" href="#home">Home</a></li>
           <li><a href="https://www.coindesk.com/" target="_blank"><span><i class="devicon-codeigniter-plain colored"></i></span>BitCoin News</a></li>
           <li><a href="https://github.com/OlaJohn-Ajiboye/btex-codeafric/tree/master" target="_blank"><span><i class="devicon-github-plain"></i></span> Code </a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="https://twitter.com/jolajiboye" target="_blank">About</a></li>
           <li><a href="#"  ng-click="logout()">Logout  <span class ="glyphicon glyphicon-log-out"></span></a></li>
         </ul>
      </div>
@@ -121,14 +121,14 @@
 
 
           <div ng-init="getData()" class=" row " >
-            <div class="horizontal col-lg-5 ">
+            <div class=" col-lg-5 ">
               <div>
-                  <a class="twitter-timeline"  href="https://twitter.com/search?q=%23bitcoin%20" data-widget-id="959555305616171010">Tweets about #bitcoin </a>
+                  <a class="twitter-timeline twitter"  href="https://twitter.com/search?q=%23bitcoin%20" data-widget-id="959555305616171010">Tweets about #bitcoin </a>
                   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                
-                
-                
-                <md-content class="md-padding history test1">
+                </div>
+                <br>
+                <div class="see">
+                 <md-content class="md-padding history test1">
                   <md-card class="test1" layout="column">
                     <md-toolbar class="md-primary">
                       <div class="md-toolbar-tools history">
@@ -158,7 +158,7 @@
                         </div>
                       </div>
                       <h4 class="text-xs-center tab2">Historical Data</h4>
-                      <div class="test">
+                      <div >
                         <table class="table table-bordered ">
                           <thead class="tab thead-dark">
                             <tr>
@@ -175,10 +175,9 @@
                         </table>
                       </div>
               </div>
-            </div>
-            <div>
+           
               <h6  class="disclaimer">Disclaimer:{{disclaimer}}</h6>
-            </div>
+          
             <br>
             <br>
             <!-- JS Files-->
