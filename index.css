@@ -2,24 +2,29 @@
 
 
  html, body {
-    padding:40px;
+     margin:auto;
+    padding-top:40px;
     align-content: middle;
     vertical-align: middle;
     background-color: #90a4ae;
-    
+    font-family: 'Rammetto One', cursive;
+    font-weight: 500;
 }
 
 .title{
     color:#ffd600;
     font-size: 35px;
     font-weight: 900;
-    padding-left: 135px;
     font-family: Lobster, Monospace;
+    text-align: center;
+    font-family: 'Rammetto One', cursive;
 }
 .currency{
     color:#ffd600;
      font-weight: 800;
-}
+     font-size: 25px;
+     font-family: 'Rammetto One', cursive;
+        }
 .theDropdown {
     width: 180px;
 }
@@ -27,16 +32,18 @@
     padding-bottom:25px;
 }
 #units{
-    font-size: 30px;
-    font-weight: 600;
-    color: #ffd600 ;
+    color:#ffd600;
+     font-weight: 800;
+     font-size: 25px;
+     font-family: 'Rammetto One', cursive;
     padding-right: 105px;
-   
+    
 }
 .pay{
-    font-size: 30px;
-    font-weight: 600;
-    color: #ffd600 ;
+    color:#ffd600;
+     font-weight: 800;
+     font-size: 25px;
+     font-family: 'Rammetto One', cursive;
     padding-right:105px; 
     padding-bottom:15px; 
 }
@@ -47,7 +54,7 @@
 
 
 .tab{
-    font-size: 45px;
+    font-size: 15px;
     font-weight:800;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -56,16 +63,20 @@
     background-color: #263238;
       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     background-color: #263238;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    font-weight: 800;
+    font-size: 25px;
+    
 }
 
 .history2{
     color:#ffd600;
     align-content:center;
     margin:auto;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    text-align: center;
+    
+    font-weight: 800;
+    font-size: 15px;
+    font-family: 'Rammetto One', cursive;
 }
 
 .date{
@@ -76,18 +87,19 @@
     color:#ffd600;
     font-size: 15px;
     font-weight:800;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
 }
 
 .tab2{
     color:#ffd600;
-    font-size: 25px;
+    font-size: 20px;
     font-weight:800;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Rammetto One', cursive;
 }
 .test1{
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     background-color: #263238;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
@@ -98,7 +110,8 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #263238;
-    border:solid 2px yellow;
+    border:solid 4px yellow;
+    font-size: 25px;
 }
 
 li {
@@ -108,6 +121,7 @@ li {
 ul li:last-child { float: right;
     color: #ffd600;
     font-weight: 800;
+    font-size: 25px;
  }
 
 li a {
@@ -135,11 +149,12 @@ table.table-bordered{
   }
 table.table-bordered > thead > tr > th{
     border:.1px solid #ffd600;
-    font-size:17px;
+    font-size:15px;
+    font-weight: 900;
 }
 table.table-bordered > tbody > tr > td{
     border:.1px solid #ffd600;
-    font-size:17px;
+    font-size:15px;
 }
 
 .disclaimer{

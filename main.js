@@ -23,7 +23,13 @@ console.log(endDate);
       {code: 'GBP', name: 'British Pound'},
       {code: 'NGN',  name: 'Nigerian Naira'},
       {code: 'CNY',  name: 'Chinese Yuan'},
-      {code: 'CAD',  name: 'Canadian Dollars'}
+      {code: 'CAD',  name: 'Canadian Dollars'},
+      {code: 'JPY',  name: 'Japanese yen'},
+      {code: 'CHF',  name: 'Swiss franc'},
+      {code: 'RUB',  name: 'Russian rouble'},
+      {code: 'ZAR',  name: 'South African Rand'},
+      {code: 'SGD',  name: 'Singapore dollar'}
+      
   ];
 
   checkSession = function () {

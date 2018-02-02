@@ -1,7 +1,9 @@
 <html ng-app="coinApp">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
   <!--Style sheets-->
   <link href="vendor/css/bootstrap.css" rel="stylesheet">
   <link href="vendor/css/bootstrap-select.css" rel="stylesheet">
@@ -10,6 +12,7 @@
   <link href="vendor/css/angular-material.min.css" rel="stylesheet">
   <link href="vendor/css/icon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
   <link rel="stylesheet" href="vendor/css/material-datetimepicker.min.css" type="text/css" />
   <link href="vendor/css/tw-currency-select.css" rel="stylesheet">
   <link href="index.css" rel="stylesheet">
@@ -17,6 +20,7 @@
 <!--Body starts-->
 
 <body ng-controller="mainController">
+  <div class="container-fluid">
   <div ng-init="getPrice()" class="container">
       <ul>
           <li><a class="active" href="#home">Home</a></li>
@@ -25,7 +29,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#"  ng-click="logout()">Logout  <span class ="glyphicon glyphicon-log-out"></span></a></li>
         </ul>
-     
+     </div>
         <br>
         <br>
         <br>
@@ -34,8 +38,8 @@
         
     <div class="container">
         
-      <div class="row">
-        <div class="col-lg-7 col-sm-12 col-xs-12 test1">
+      <div class="row ">
+        <div class="col-lg-7 col-md-12 col-md-12 test1">
             <table class="table table-bordered ">
           <table class="table table-bordered ">
          
@@ -131,7 +135,7 @@
                       
                     </md-toolbar>
                     <md-card-content class="md-padding">
-                      <p class="tab1">
+                      <p class="tab1 ">
                         Double click or Double tap to make selections.
                       </p>
                       <table class="tab table table-bordered  ">
@@ -190,6 +194,8 @@
 
 
 
+ </div>
 </body>
 
 </html>
+</div>
