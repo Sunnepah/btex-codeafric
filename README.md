@@ -1,3 +1,5 @@
 # btex-codeafric
-Angular app to consume bitcoinExchange API 
-Apps runs on [Demo](https://whispering-refuge-99874.herokuapp.com)
+
+
+This my first  Angular app to consume bitcoinExchange API from [CoinDesk](https://www.coindesk.com/api/)
+You can find the [Demo](https://john-btex.herokuapp.com/) of this App [Here](https://john-btex.herokuapp.com/)
