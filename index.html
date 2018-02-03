@@ -22,6 +22,8 @@
 <body ng-controller="mainController">
   <div class="container-fluid">
   <div ng-init="getPrice()" class="container">
+      <div class="row ">
+        <div class="col-12"></div>
       <ul>
           <li><a class="active" href="#home">Home</a></li>
           <li><a href="https://www.coindesk.com/" target="_blank"><span><i class="devicon-codeigniter-plain colored"></i></span>BitCoin News</a></li>
@@ -30,6 +32,8 @@
           <li><a href="#"  ng-click="logout()">Logout  <span class ="glyphicon glyphicon-log-out"></span></a></li>
         </ul>
      </div>
+    </div>
+  </div>
         <br>
         <br>
         <br>
@@ -176,7 +180,7 @@
                       </div>
               </div>
            
-              <h6  class="disclaimer">Disclaimer:{{disclaimer}}</h6>
+              <h4  class="disclaimer">Disclaimer:{{disclaimer}}</h4>
           
             <br>
             <br>
