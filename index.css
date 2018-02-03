@@ -170,7 +170,6 @@ li a:hover:not(.active) {
     background-color:#263238;
     overflow: hidden;
     border:solid 4px yellow;
-    font-size: 20px;
     margin: 0;
     padding: 0;
 }
@@ -183,6 +182,7 @@ li a:hover:not(.active) {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 25px;
     
 }
 
@@ -203,6 +203,7 @@ li a:hover:not(.active) {
 }
 .topnav a:nth-last-child(2) {
     float: right;
+    font-size: 25px;
 }
 
 
