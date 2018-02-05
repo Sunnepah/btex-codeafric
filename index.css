@@ -33,6 +33,7 @@
     font-family: 'Rammetto One', cursive;
     font-weight: 500;
     width:100%;
+    background-image: url("bg.jpg")
 }
 
 .title{
