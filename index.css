@@ -24,6 +24,14 @@
     }
   }
 
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    bottom: 0;  /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
  html, body {
     margin:auto;
     padding-top:40px;
@@ -32,17 +40,19 @@
     background-color: #90a4ae;
     font-family: 'Rammetto One', cursive;
     font-weight: 500;
-    width:100%;
-    background-image: url("bg.jpg")
+    
+    background-image: url("https://static.pexels.com/photos/459301/pexels-photo-459301.jpeg") ;
+   
+    
 }
 
 .title{
     color:#ffd600;
-    font-size: 35px;
+    font-size: 55px;
     font-weight: 900;
-    font-family: Lobster, Monospace;
+    font-family: 'Lobster',cursive;
     text-align: center;
-    font-family: 'Rammetto One', cursive;
+    
 }
 .currency{
     color:#ffd600;
