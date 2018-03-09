@@ -21,20 +21,20 @@
 <!--Body starts-->
 
 <body ng-controller="mainController">
+<div class="container">
 
-  <div ng-init="getPrice()" class="container">
-    <hi></hi>
-    <br>  <br>  <br>
-    <div>
-      <div class="topnav navbar-fixed" id="myTopnav">
-          <a class="active" href="#home">Home</a>
-          <a href="https://www.coindesk.com/" target="_blank"><span><i class="devicon-codeigniter-plain colored"></i></span>BitCoin News</a>
-          <a href="https://github.com/OlaJohn-Ajiboye/btex-codeafric/tree/master" target="_blank"><span><i class="devicon-github-plain"></i></span> Code </a>
-          <a href="https://twitter.com/jolajiboye" target="_blank">About</a>
-          <a href="#"  ng-click="logout()">Logout  <span class ="glyphicon glyphicon-log-out"></span></a>
-           <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-      </div>
-    
+  <div ng-init="getPrice()" >
+     <br>  <br>
+   <div class="topnav navbar-fixed" id="myTopnav">
+      <a class="active" href="#home">Home</a>
+      <a href="https://www.coindesk.com/" target="_blank"><span><i class="devicon-codeigniter-plain colored"></i></span>BitCoin News</a>
+      <a href="https://github.com/OlaJohn-Ajiboye/btex-codeafric/tree/master" target="_blank"><span><i class="devicon-github-plain"></i></span> Code </a>
+      <a href="https://twitter.com/jolajiboye" target="_blank">About</a>
+      <a href="#"  ng-click="logout()">Logout  <span class ="glyphicon glyphicon-log-out"></span></a>
+       <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+</nav>
+  </div>
       <br><br><br>
 
         <h5 class="title">{{title}}</h5>
