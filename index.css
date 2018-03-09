@@ -24,14 +24,6 @@
     }
   }
 
-  .navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed; /* Set the navbar to fixed position */
-    bottom: 0;  /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-}
-
  html, body {
     margin:auto;
     padding-top:40px;
@@ -48,11 +40,11 @@
 
 .title{
     color:#ffd600;
-    font-size: 55px;
+    font-size: 35px;
     font-weight: 900;
-    font-family: 'Lobster',cursive;
+    font-family: Lobster, Monospace;
     text-align: center;
-    
+    font-family: 'Rammetto One', cursive;
 }
 .currency{
     color:#ffd600;
