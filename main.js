@@ -98,7 +98,7 @@ coinApp.controller('LoginController', function ($scope, $http) {
     console.log("submitted: ", $scope.email, $scope.passwd);
     $http({
       method: 'POST',
-      url: 'https://reqres.in/api/login',
+      url: 'https://btex-backend.herokuapp.com/api/login',
       data: {
         "email": $scope.email,
         "password": $scope.passwd
@@ -133,7 +133,7 @@ coinApp.controller('RegisterController', function ($scope, $http) {
 
     $http({
       method: "POST",
-      url: "https://reqres.in/api/register",
+      url: "https://btex-backend.herokuapp.com/api/register",
       data: {
         "email": $scope.email,
         "password": $scope.passwd,
