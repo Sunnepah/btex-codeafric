@@ -147,7 +147,7 @@ coinApp.controller('RegisterController', function ($scope, $http) {
         alert("Registration successful");
         window.location.href = "login.html";
       } else {
-        alert("Registration response unknown");
+        alert(response.data.message);
       }
       }, function errorCallback(response) {
         alert("Registration failed: " + response.data.error);
