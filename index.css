@@ -24,16 +24,52 @@
     }
   }
 
+  
+.topnav {
+    background-color:#263238;
+    overflow: hidden;
+    border:solid yellow;
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+/* Change the color of links on hover */
+.topnav a:hover:not(.active) {
+    background-color: #111;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #ffd600;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
  html, body {
     margin:auto;
     padding-top:40px;
     align-content: middle;
     vertical-align: middle;
-    background-color: #90a4ae;
+    background-color: #d1c4e9;
     font-family: 'Rammetto One', cursive;
     font-weight: 500;
     
-    /* background-image: url("https://static.pexels.com/photos/459301/pexels-photo-459301.jpeg") ; */
+  /* background-image: url("http://eskipaper.com/images/cool-background-pictures-2.jpg") ;*/
    
     
 }
@@ -171,45 +207,6 @@ li a:hover:not(.active) {
 
 **/
 
-.topnav {
-    background-color:#263238;
-    overflow: hidden;
-    border:solid 4px yellow;
-    margin: 0;
-    padding: 0;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    
-}
-
-/* Change the color of links on hover */
-.topnav a:hover:not(.active) {
-    background-color: #111;
-}
-
-/* Add an active class to highlight the current page */
-.active {
-    background-color: #ffd600;
-    color: white;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-.topnav a:nth-last-child(2) {
-    float: right;
-    font-size: 25px;
-}
 
 
 

@@ -120,7 +120,7 @@ coinApp.controller('LoginController', function ($scope, $http) {
 
   $scope.handleFormSubmit = function () {
     //console.log("submitted: ", $scope.email, $scope.passwd);
-    if (typeof $scope.email == "undefined" || typeof $scope.passwd == "undefined") {
+    if (typeof $scope.email == "undefined" || typeof $scope.password == "undefined") {
       alert("Ensure you enter correct email and password");
       return;
     }
@@ -181,19 +181,25 @@ coinApp.controller('RegisterController', function ($scope, $http) {
         alert("Registration successful");
         window.location.href = "login.html";
       } else {
-        alert("Login failed unknown error");
+        alert("Registration failed " + reponse.data.message);
       }
     }, function errorCallback(response) {
-      alert("Login failed: " + response.data.error);
+      alert("Registration Failed,Try again ");
     });
   };
 
-  $scope.currenciesWithNames = [
+  $scope.currenciesWithNames =  [
     { code: 'EUR', name: 'Euro' },
     { code: 'GBP', name: 'British Pound' },
     { code: 'NGN', name: 'Nigerian Naira' },
     { code: 'CNY', name: 'Chinese Yuan' },
-    { code: 'CAD', name: 'Canadian Dollars' }
+    { code: 'CAD', name: 'Canadian Dollars' },
+    { code: 'JPY', name: 'Japanese yen' },
+    { code: 'CHF', name: 'Swiss franc' },
+    { code: 'RUB', name: 'Russian rouble' },
+    { code: 'ZAR', name: 'South African Rand' },
+    { code: 'SGD', name: 'Singapore dollar' }
+
   ];
 });
 
