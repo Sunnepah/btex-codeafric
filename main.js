@@ -32,20 +32,20 @@ coinApp.controller('mainController', function ($scope, $http) {
 
   ];
 
-  checkSession = function () {
+ /*   checkSession = function () {
     var registerToken = window.sessionStorage.getItem("login_token");
     if (!registerToken) {
       window.location.href = "login.html";
     }
   }
 
-  $scope.logout = function () {
+$scope.logout = function () {
     window.sessionStorage.removeItem("login_token");
     alert(" You have Logged Out Succesfully")
     window.location.href = "login.html";
-  }
+  }*/
   $scope.getPrice = function () {
-    checkSession();
+    //checkSession();
     console.log("Trying to get price");
     $http({
       method: 'GET',
@@ -116,7 +116,7 @@ coinApp.controller('LoginController', function ($scope, $http) {
     if (!!loginToken) {
       window.location.href = "index.html";
     }
-  }
+  };
 
   $scope.handleFormSubmit = function () {
     //console.log("submitted: ", $scope.email, $scope.passwd);
@@ -127,7 +127,7 @@ coinApp.controller('LoginController', function ($scope, $http) {
 
     $http({
       method: 'POST',
-      url: 'https://btexapi.herokuapp.com/api/login',
+      url: 'http://localhost:5000/api/login',
       data: {
         "email": $scope.email,
         "password": $scope.passwd
@@ -166,7 +166,7 @@ coinApp.controller('RegisterController', function ($scope, $http) {
 
     $http({
       method: 'POST',
-      url: 'https://btexapi.herokuapp.com/api/register',
+      url: 'http://localhost:5000/api/register',
       data: {
         "first_name": $scope.first_name,
         "last_name": $scope.last_name,
@@ -203,7 +203,14 @@ coinApp.controller('RegisterController', function ($scope, $http) {
   ];
 });
 
-
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+      x.className += " responsive";
+  } else {
+      x.className = "topnav";
+  }
+}
 
 
 
