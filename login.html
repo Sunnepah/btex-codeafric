@@ -3,37 +3,42 @@
 <head>
     <link href="vendor/css/bootstrap.css" rel="stylesheet">
     <link href="vendor/css/bootstrap-select.css" rel="stylesheet">
-
-    <script src="vendor/js/angular.js"></script>
-    <script src="vendor/js/jquery.js"></script>
-    <script src="vendor/js/bootstrap.js"></script>
-    <script src="vendor/js/bootstrap-select.js"></script>
     <link href="login.css" rel="stylesheet">
-    <script src="main.js"></script>
-    <script src="tw-currency-select.js"></script>
 </head>
 
 <body ng-controller="LoginController" ng-init="init()">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-md-offset-4 text-center">
+            <div class="col-lg-8 col-lg-offset-3 col-sm-12 text-center " >
                 <div class="search-box">
                     <div class="caption">
-                        <h3>BitCoinValue calculator</h3>
-                        <p>Login here</p>
+                        <h1 class="  align-content-sm-center text-center "> BitCoin Calculator</h1>
+                        <p class=" col-md-offset-4 text-center text-info login">Login here  <span class ="glyphicon glyphicon-hand-down"></span></p>
                     </div>
                     <form class="loginForm" ng-submit="handleFormSubmit()">
                         <div class="input-group">
-                            <input type="text" id="email" ng-model="email" class="form-control" placeholder="Email" required>
-                            <input type="password" id="passwd" ng-model="passwd" class="form-control" placeholder="Password" required>
-                            <input type="submit" id="submit" class="form-control" value="Submit">
+                            <input type="text" id="email" ng-model="email" class="form-control" placeholder="Email">
+                            <input type="password" id="passwd" ng-model="passwd" class="form-control" placeholder="Password">
+                            <input type="submit" id="submit" class="form-control" value="Login">
                         </div>
                     </form>
                     <br>
-                    <div style="text-align: center;"><a href="register.html">Register</a></div>
-                </div>
+                   <div style="text-align:center"> <a href="register.html">Register</a>
+                   </div></div>
             </div>
         </div>
     </div>
-
+    <script src="vendor/js/angular.js"></script>
+    <script src="vendor/js/angular-animate.min.js"></script>
+    <script src="vendor/js/angular-aria.min.js"></script>
+    <script src="vendor/js/angular-material.min.js"></script>
+    <script type="text/javascript" src="vendor/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="vendor/js/highlight.min.js"></script>
+    <script src="vendor/js/jquery.js"></script>
+    <script src="vendor/js/bootstrap.js"></script>
+    <script src="vendor/js/bootstrap-select.js"></script>
+    <script src="main.js"></script>
+    <script src="vendor/js/tw-currency-select.js"></script>
+    <script src="vendor/js/beautifier.js"></script>
+    <script src="vendor/js/angular-material-datetimepicker.js"></script>
 </body>

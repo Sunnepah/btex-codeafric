@@ -14,13 +14,9 @@
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <script src="vendor/js/angular.js"></script>
-    <script src="vendor/js/jquery.js"></script>
-    <script src="vendor/js/bootstrap.js"></script>
-    <script src="vendor/js/bootstrap-select.js"></script>
-    <script src="main.js"></script>
-    <link href="tw-currency-select.css" rel="stylesheet">
-    <script src="tw-currency-select.js"></script>
+ 
+    <link href="vendor/css/tw-currency-select.css" rel="stylesheet">
+    
 
     <title>Admin</title>
 </head>
@@ -30,28 +26,28 @@
         <div class="row main">
             <div class="main-login main-center">
                 <h5>Sign up to BitCoinValue Calculator.</h5>
-                <form class="" ng-submit="handleRegisterFormSubmit()">
+                <form ng-submit="handleFormRegister()">
 
                     <div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">First Name</label>
+                        <label for="name" class="cols-sm-2 control-label">Username</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <i class="fa fa-user fa" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control" name="first_name" id="name" placeholder="Enter your first Name" ng-model="first_name" />
+                                <input type="text" class="form-control" name="first_name" id="name" ng-model="first_name" placeholder="Enter your first Name" required />
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">Last Name</label>
+                        <label for="name" class="cols-sm-2 control-label">Name</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <i class="fa fa-user fa" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control" name="last_name" id="name" placeholder="Enter your last Name" ng-model="last_name" />
+                                <input type="text" class="form-control" name="last_name" id="names" ng-model="last_name" placeholder="Enter your last Name" required />
                             </div>
                         </div>
                     </div>
@@ -63,7 +59,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-envelope fa" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" ng-model="email" />
+                                <input type="email" class="form-control" name="email" id="email" ng-model="email" placeholder="Enter your Email" required/>
                             </div>
                         </div>
                     </div>
@@ -73,10 +69,10 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon">
-                                    <i class="fa fa-money fa" aria-hidden="true"></i>
+                                        <i class="fa fa-lock fa-money" aria-hidden="true"></i>
                                 </span>
                                 <currency-select search-placeholder="Search Currency..." none-selected-text="Select Currency"
-                                    currencies="currenciesWithNames">
+                                ng-model="currency" currencies="currenciesWithNames"> 
                                 </currency-select>
                             </div>
                         </div>
@@ -89,7 +85,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
                                 </span>
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" ng-model="passwd" />
+                                <input type="password" class="form-control" name="password" id="password" ng-model="password" placeholder="Enter your Password" required/>
                             </div>
                         </div>
                     </div>
@@ -101,7 +97,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
                                 </span>
-                                <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password" ng-model="confirm" />
+                                <input type="password" class="form-control" name="confirm" id="confirm" ng-model="confirmpassword" placeholder="Confirm your Password" required/>
                             </div>
                         </div>
                     </div>
@@ -111,15 +107,28 @@
                     </div>
 
                 </form>
-                <div style="text-align: center; color:blanchedalmond;">
-                    <a href="login.html">Login</a>
-                </div>
+                <div style="text-align:center"> <a href="login.html">Login</a>
             </div>
         </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+
+    <script src="vendor/js/angular.js"></script>
+<script src="vendor/js/angular-animate.min.js"></script>
+<script src="vendor/js/angular-aria.min.js"></script>
+<script src="vendor/js/angular-material.min.js"></script>
+<script type="text/javascript" src="vendor/js/moment-with-locales.min.js"></script>
+<script type="text/javascript" src="vendor/js/highlight.min.js"></script>
+<script src="vendor/js/jquery.js"></script>
+<script src="vendor/js/bootstrap.js"></script>
+<script src="vendor/js/bootstrap-select.js"></script>
+<script src="main.js"></script>
+<script src="vendor/js/tw-currency-select.js"></script>
+<script src="vendor/js/beautifier.js"></script>
+<script src="vendor/js/angular-material-datetimepicker.js"></script>
 </body>
 
 </html>
